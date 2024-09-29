@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Example</title>
+</head>
+<body>
+
+    <img id="hoverImage" src="https://images.pexels.com/photos/38275/anonymous-studio-figure-photography-facial-mask-38275.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hover over me!" />
+
+    <script>
+        // Get the image element
+        var image = document.getElementById("hoverImage");
+
+        // Add event listeners to the image for mouseover and mouseout
+        image.addEventListener("mouseover", function() {
+            image.style.display = "none"; // Hide the image on hover
+        });
+
+        image.addEventListener("mouseout", function() {
+            image.style.display = "block"; // Show the image when mouse is not hovering
+        });
+    </script>
+
+</body>
+</html>
