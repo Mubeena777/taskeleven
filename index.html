@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Hover Example</title>
+    <title>Hover to Hide Background Image</title>
 </head>
 <body>
-
-    <img id="hoverImage" src="https://images.pexels.com/photos/38275/anonymous-studio-figure-photography-facial-mask-38275.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hover over me!" />
-
+    <h1 id="title">Catch Me If You Can</h1>
     <script>
-        // Get the image element
-        var image = document.getElementById("hoverImage");
-
-        // Add event listeners to the image for mouseover and mouseout
-        image.addEventListener("mouseover", function() {
-            image.style.display = "none"; // Hide the image on hover
+        const bodyElement = document.body;
+        const titleElement = document.getElementById('title');
+        bodyElement.style.backgroundImage = "url('https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?cs=srgb&dl=pexels-pixabay-206359.jpg&fm=jpg')";
+        bodyElement.style.backgroundSize = 'cover';
+        bodyElement.style.backgroundPosition = 'center';
+        bodyElement.style.height = '100vh';
+        bodyElement.style.margin = '0';
+        titleElement.style.position = 'absolute';
+        titleElement.style.top = '50%';
+        titleElement.style.left = '50%';
+        titleElement.style.transform = 'translate(-50%, -50%)';
+        titleElement.style.color = 'white';
+        titleElement.style.textAlign = 'center';
+        bodyElement.addEventListener('mouseover', function() {
+            bodyElement.style.backgroundImage = 'none';
         });
-
-        image.addEventListener("mouseout", function() {
-            image.style.display = "block"; // Show the image when mouse is not hovering
+                bodyElement.addEventListener('mouseout', function() {
+            bodyElement.style.backgroundImage = "url('https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?cs=srgb&dl=pexels-pixabay-206359.jpg&fm=jpg')"; 
         });
     </script>
-
 </body>
 </html>
